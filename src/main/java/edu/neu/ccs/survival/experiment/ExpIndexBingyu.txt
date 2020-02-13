@@ -1,0 +1,6 @@
+1: Cox Hazard model
+230: Cox Hazard model on all locations.
+231: Cox Hazard model on all states.
+234: Cox Hazard model with knots.
+251: Cox Hazard model with threshold.
+259: Poisson Log-linear model.

@@ -1,0 +1,38 @@
+out/
+.idea/
+.gradle/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+config/local.config
+src/main/java/edu/neu/ccs/survival/tmp/
+logs/
+build/
+target/
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+
+## eclipse
+.project
+.classpath
+eclipse-build
+.settings
+
+
+## netbeans
+nb-configuration.xml
+nbactions.xml
+local.properties
+src/test/java/edu/neu/ccs/survival/tmp
