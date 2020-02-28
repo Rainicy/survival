@@ -33,7 +33,7 @@ Wang, B., Eum, K., Kazemiparkouhi, F. et al. The impact of long-term PM2.5 expos
 [**Development**] if you need modify the code and extend for your own application, you need [Java 8](https://www.oracle.com/java/technologies/javase-jdk8-downloads.html) and [Maven](https://maven.apache.org/).
 
 ## Setup
-In order to run survival as an application, please download the latest [pre-complied package](https://github.com/Rainicy/survival/releases/) (with a name like **survival-x.x.x.zip**) and unzip it. Go to the unzipped forlder. You are ready to go now!
+In order to run survival as an application, please download the latest [pre-complied package](https://github.com/Rainicy/survival/releases/) (with a name like **survival-x.x.x.zip**) and unzip it. Go to the unzipped folder. You are ready to go now!
 
 ## Cox PH Linear Model Application
 
@@ -72,7 +72,7 @@ isTies=false
 isParallelism=true
 # whether penalizing the weight
 l2=false
-# if pernalizing the weight, set the strength, otherwise it is useless.
+# if penalizing the weight, set the strength, otherwise it is useless.
 l2Strength=1
 
 # the application class name
@@ -110,3 +110,28 @@ pm              0.011026        0.008762
 Training time: 19 sec.
 ```
 Wherein the estimated predictor is __pm__, the estimated coefficient is __0.011026__ and the SE is __0.008762__.
+
+
+## For Developer
+
+If you are a Java developer who prefer working with the source code, you can clone this repository to your local machine. ([Maven](https://maven.apache.org/) is required)
+
+#### mvn install pre-required package 
+
+* Download the [pyramid-x.x.x.jar (v0.8.4)](https://github.com/cheng-li/pyramid/releases/tag/v0.8.4) to your local, and suppose the jar file is located in `path_to_pyramid/pyramid-0.8.4.jar`. 
+
+* mvn install the jar package to your local, by running
+```
+mvn install:install-file -Dfile=path_to_pyramid/pyramid-0.8.4.jar -DgroupId=edu.neu.ccs.pyramid -DartifactId=pyramid -Dversion=0.8.4 -Dpackaging=jar
+```
+
+#### mvn compile the survival package
+
+* In order to compile the package from the survival source code (in the cloned survival folder), simply run:
+```
+mvn clean package
+```
+The compressed package will be created under the `target/releases` directory. 
+
+
+
