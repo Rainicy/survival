@@ -1,9 +1,10 @@
-package data_formatter.poisson;
+package edu.neu.ccs.survival.data_formatter.poisson;
+
+import edu.neu.ccs.survival.poisson.DataFormat;
+import edu.neu.ccs.survival.poisson.MapDataFormat;
 
 import org.apache.mahout.math.DenseVector;
 import org.apache.mahout.math.Vector;
-import poisson.DataFormat;
-import poisson.MapDataFormat;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

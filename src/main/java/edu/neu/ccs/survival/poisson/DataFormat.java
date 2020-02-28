@@ -1,4 +1,4 @@
-package poisson;
+package edu.neu.ccs.survival.poisson;
 
 import org.apache.mahout.math.DenseVector;
 import org.apache.mahout.math.Vector;

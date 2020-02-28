@@ -1,11 +1,13 @@
-package experiment;
+package edu.neu.ccs.survival.experiment;
 
-import data_formatter.poisson.Format;
+import edu.neu.ccs.survival.data_formatter.poisson.Format;
+import edu.neu.ccs.survival.poisson.DataFormat;
+import edu.neu.ccs.survival.poisson.PoissonClassifier;
+import edu.neu.ccs.survival.poisson.PoissonOptimizer;
+
 import edu.neu.ccs.pyramid.configuration.Config;
 import edu.neu.ccs.pyramid.optimization.LBFGS;
-import poisson.DataFormat;
-import poisson.PoissonClassifier;
-import poisson.PoissonOptimizer;
+
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;

@@ -1,4 +1,5 @@
-package cox_hazards;
+package edu.neu.ccs.survival.cox_hazards;
+
 import org.apache.mahout.math.DenseVector;
 import org.apache.mahout.math.Vector;
 

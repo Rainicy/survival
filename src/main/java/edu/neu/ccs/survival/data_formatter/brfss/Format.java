@@ -1,7 +1,7 @@
-package data_formatter.brfss;
+package edu.neu.ccs.survival.data_formatter.brfss;
 
-import cox_hazards.DataFormat;
-import cox_hazards.MultiKey;
+import edu.neu.ccs.survival.cox_hazards.DataFormat;
+import edu.neu.ccs.survival.cox_hazards.MultiKey;
 import edu.neu.ccs.pyramid.util.Pair;
 import org.apache.mahout.math.DenseVector;
 import org.apache.mahout.math.Vector;

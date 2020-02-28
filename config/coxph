@@ -1,0 +1,27 @@
+# data path
+data_path=sample_data/test.csv
+
+# loader settings
+# separated symbol for the given data
+sep=,
+# the predictors are included in the model
+predictors=pm
+# stratas
+stratas=age,sex,race
+# death
+death=dead
+# life
+life=total
+
+# optimizer settings
+# whether considering ties for death, default false
+isTies=false
+# if given multiple cores, set isParallelism as true
+isParallelism=true
+# whether penalizing the weight
+l2=false
+# if pernalizing the weight, set the strength, otherwise it is useless.
+l2Strength=1
+
+# the application class name
+survival.class=CoxPH

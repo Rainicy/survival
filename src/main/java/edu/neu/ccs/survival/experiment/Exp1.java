@@ -1,10 +1,10 @@
-package experiment;
+package edu.neu.ccs.survival.experiment;
 
-import cox_hazards.COXClassifier;
-import cox_hazards.COXOptimizer;
-import cox_hazards.DataFormat;
-import data_formatter.brfss.DSFormat;
-import data_formatter.brfss.Format;
+import edu.neu.ccs.survival.cox_hazards.COXClassifier;
+import edu.neu.ccs.survival.cox_hazards.COXOptimizer;
+import edu.neu.ccs.survival.cox_hazards.DataFormat;
+import edu.neu.ccs.survival.data_formatter.brfss.DSFormat;
+import edu.neu.ccs.survival.data_formatter.brfss.Format;
 import edu.neu.ccs.pyramid.configuration.Config;
 import edu.neu.ccs.pyramid.optimization.LBFGS;
 
@@ -19,8 +19,6 @@ import java.util.concurrent.TimeUnit;
 public class Exp1 {
 
     public static void main(String[] args) throws IOException {
-
-
         if (args.length != 1) {
             throw new IllegalArgumentException("Please specify a properties file.");
         }

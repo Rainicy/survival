@@ -1,6 +1,5 @@
-package cox_hazards;
+package edu.neu.ccs.survival.cox_hazards;
 
-import cox_hazards.MultiKey;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 

@@ -3,13 +3,16 @@ JAVA_OPTS="-Xms5g -Xmx10g"
 
 # determine pyramid home
 SCRIPT="$0"
-PYRAMID_HOME=`dirname "$SCRIPT"`
-PYRAMID_HOME=`cd "$PYRAMID_HOME"; pwd`
+SURVIVAL_HOME=`dirname "$SCRIPT"`
+SURVIVAL_HOME=`cd "$SURVIVAL_HOME"; pwd`
 
 # set class path
-PYRAMID_CLASSPATH="$PYRAMID_HOME/lib/*"
+SURVIVAL_CLASSPATH="$SURVIVAL_HOME/lib/*"
+
+# path containing the log4j2.xml file
+LOG4J2="$SURVIVAL_HOME/config/"
 
 # run
-exec java $JAVA_OPTS  -cp "$PYRAMID_CLASSPATH"  \
-                edu.neu.ccs.survival.experiment.ExpLauncher $@
+exec java $JAVA_OPTS  -cp "$SURVIVAL_CLASSPATH":"$LOG4J2"  \
+                edu.neu.ccs.survival.application.AppLauncher $@
 

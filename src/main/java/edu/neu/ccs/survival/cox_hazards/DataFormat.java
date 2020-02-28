@@ -1,4 +1,4 @@
-package cox_hazards;
+package edu.neu.ccs.survival.cox_hazards;
 
 import com.google.common.primitives.Doubles;
 import edu.neu.ccs.pyramid.util.Pair;

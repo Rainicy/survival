@@ -1,4 +1,4 @@
-package cox_hazards;
+package edu.neu.ccs.survival.cox_hazards;
 
 import edu.neu.ccs.pyramid.optimization.Optimizable;
 import edu.neu.ccs.pyramid.util.Pair;

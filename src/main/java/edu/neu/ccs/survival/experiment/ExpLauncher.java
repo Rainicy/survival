@@ -1,4 +1,4 @@
-package experiment;
+package edu.neu.ccs.survival.experiment;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.common.reflect.ClassPath;
@@ -50,19 +50,19 @@ public class ExpLauncher {
     }
 
     private static void help(){
-        System.out.println("Usage: ./pyramid <exp_name> <properties_file>\n" +
+        System.out.println("Usage: ./survival <exp_name> <properties_file>\n" +
                 "The <exp_name> is case-insensitive.\n" +
                 "The <properties_file> can be specified by either an absolute or a relative path.\n"+
-                "Example: ./pyramid exp1 config/exp1.properties");
+                "Example: ./survival exp1 config/exp1.properties");
         System.exit(0);
     }
 
     private static void error(){
         System.err.println("Invalid command.\n" +
-                "Usage: ./pyramid <exp_name> <properties_file>\n" +
+                "Usage: ./survival <exp_name> <properties_file>\n" +
                 "The <exp_name> is case-insensitive.\n" +
                 "The <properties_file> can be specified by either an absolute or a relative path.\n"+
-                "Example: ./pyramid exp1 config/exp1.properties");
+                "Example: ./survival exp1 config/exp1.properties");
         System.exit(1);
     }
 
@@ -72,7 +72,7 @@ public class ExpLauncher {
         String lower = className.toLowerCase();
         String realName = null;
         ClassPath classPath = ClassPath.from(Thread.currentThread().getContextClassLoader());
-        ImmutableSet<ClassPath.ClassInfo> classes = classPath.getTopLevelClasses("experiment");
+        ImmutableSet<ClassPath.ClassInfo> classes = classPath.getTopLevelClasses("edu.neu.ccs.survival.experiment");
         for (ClassPath.ClassInfo classInfo: classes){
             if (classInfo.getSimpleName().toLowerCase().equals(lower)){
                 realName = classInfo.getName();

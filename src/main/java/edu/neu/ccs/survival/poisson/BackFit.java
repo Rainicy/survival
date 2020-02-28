@@ -1,4 +1,4 @@
-package poisson;
+package edu.neu.ccs.survival.poisson;
 
 import edu.neu.ccs.pyramid.optimization.LBFGS;
 import edu.neu.ccs.pyramid.util.Pair;

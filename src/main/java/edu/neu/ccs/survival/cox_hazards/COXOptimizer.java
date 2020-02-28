@@ -1,4 +1,4 @@
-package cox_hazards;
+package edu.neu.ccs.survival.cox_hazards;
 
 import edu.neu.ccs.pyramid.optimization.Optimizable;
 import edu.neu.ccs.pyramid.util.Pair;
@@ -22,8 +22,8 @@ public class COXOptimizer implements Optimizable.ByGradientValue {
 
     Map<MultiKey, List<Integer>> death;
 
-    int deathCount;
-    int totalCount;
+    long deathCount;
+    long totalCount;
     boolean ties;
 
     public boolean isParallel() {
@@ -723,10 +723,10 @@ public class COXOptimizer implements Optimizable.ByGradientValue {
     public Map<MultiKey, List<Integer>> getDeath() {
         return death;
     }
-    public int getDeathCount() {
+    public long getDeathCount() {
         return deathCount;
     }
-    public int getTotalCount() {
+    public long getTotalCount() {
         return totalCount;
     }
 
