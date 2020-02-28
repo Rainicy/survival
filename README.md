@@ -14,12 +14,13 @@ This library includes the following algorithms (keep updating):
   
 * Poisson Log-Linear model 
 
-The package implements the Cox PH for both linear and non-linear models described in the papper, especially in the Supplementary Information part.
+The package implements the Cox PH for both linear and non-linear models described in the paper, especially in the Supplementary Information part.
 
 [**The impact of long-term PM2.5 exposure on specific causes of death: exposure-response curves and effect modification among 53 million U.S. Medicare beneficiaries**](https://link.springer.com/article/10.1186/s12940-020-00575-0)
 
 Bingyu Wang, Ki-Do Eum, Fatemeh Kazemiparkouhi, Cheng Li, Justin Manjourides, Virgil Pavlu & Helen Suh 
-Environ Health (2020)
+
+_Environ Health (2020)_
 
 #### To cite this article
 ```
@@ -84,6 +85,8 @@ Once the data and config file is ready, you could run the command to train a Cox
 ./survival config/coxph
 ```
 wherein __survival__ is a launcher script for the Cox PH linear model application, and __config/coxph__ is the configuration file specifying the data path, format and algorithm setup. 
+
+**_Note_**: if you are running out of memory, you probably need a larger machine, and increase memory allocation in the [survival](https://github.com/Rainicy/survival/blob/master/survival) file, i.e. `JAVA_OPTS="-Xms20g -Xmx200g"`.
 
 #### Estimated Result
 Once the model is trained from the previous step, the console outputs the estimated coefficients and standard errors. An example of the output is shown as:
