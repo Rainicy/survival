@@ -18,6 +18,12 @@ import java.util.concurrent.TimeUnit;
  * Created by Rainicy on 2/27/20
  *
  * This is the application for Linear Cox PH model.
+ *
+ * More details can be found in the supplementary from paper
+ * ```
+ * The impact of long-term PM2.5 exposure on specific causes of death:
+ * exposure-response curves and effect modification among 53 million U.S. Medicare beneficiaries
+ * ```
  */
 public class CoxPH {
     public static void main(String[] args) throws IOException {
