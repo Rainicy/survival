@@ -111,6 +111,58 @@ Training time: 19 sec.
 ```
 Wherein the estimated predictor is __pm__, the estimated coefficient is __0.011026__ and the SE is __0.008762__.
 
+## Restricted Cubic Spline Cox PH non-Linear Model Application
+
+#### Data Sample
+Same data format as above.
+
+#### Config file
+A Restricted Cubic Spline (RCS) Cox PH config file for training the model is included in [**config/rcscoxph**](https://github.com/Rainicy/survival/blob/master/config/rcscoxph): (You need assign the data_path, and predictors, stratas, death and life column names based on your data format). 
+
+You need pay attention to the following two new variables:
+__knots__: the knots values for the predictor. E.g. number of knots is 3; then the knot locations are at 0.1, 0.5, 0.9 quantitles of the predictor. 
+__norm__: normalization option (default=2) for the cubic spline.
+
+```
+# data path
+data_path=sample_data/test.csv
+
+# loader settings
+# separated symbol for the given data
+sep=,
+# the predictors are included in the model
+predictors=pm
+# stratas
+stratas=age,sex,race
+# death
+death=dead
+# life
+life=total
+
+# optimizer settings
+# whether considering ties for death, default false
+isTies=false
+# if given multiple cores, set isParallelism as true
+isParallelism=true
+# whether penalizing the weight
+l2=false
+# if penalizing the weight, set the strength, otherwise it is useless.
+l2Strength=1
+
+# knots for restricted cubic splines
+knots=8.490129,11.025768,13.755482
+# normalization options (1 or 2) for the knots, default value 2.
+norm=2
+
+# the application class name
+survival.class=CoxPH
+```
+
+#### Train RCS Cox PH non-linear model
+Once the data and config file is ready, you could run the command to train a RCS Cox PH linear model, e.g. 
+```
+./survival config/rcscoxph
+```
 
 ## For Developer
 
