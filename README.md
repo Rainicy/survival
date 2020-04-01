@@ -120,8 +120,10 @@ Same data format as above.
 A Restricted Cubic Spline (RCS) Cox PH config file for training the model is included in [**config/rcscoxph**](https://github.com/Rainicy/survival/blob/master/config/rcscoxph): (You need assign the data_path, and predictors, stratas, death and life column names based on your data format). 
 
 You need pay attention to the following two new variables:
-__knots__: the knots values for the predictor. E.g. number of knots is 3; then the knot locations are at 0.1, 0.5, 0.9 quantitles of the predictor. 
-__norm__: normalization option (default=2) for the cubic spline.
+
+* __knots__: the knots values for the predictor. E.g. number of knots is 3; then the knot locations are at 0.1, 0.5, 0.9 quantitles of the predictor. 
+  
+* __norm__: normalization option (default=2) for the cubic spline.
 
 ```
 # data path
@@ -155,7 +157,7 @@ knots=8.490129,11.025768,13.755482
 norm=2
 
 # the application class name
-survival.class=CoxPH
+survival.class=RCSCoxPH
 ```
 
 #### Train RCS Cox PH non-linear model
